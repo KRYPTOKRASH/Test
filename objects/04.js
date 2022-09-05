@@ -1,5 +1,7 @@
-//   04 
-// * Ожидаемый результат: ({}) => истина, ({a: undefined}) => истина, ({a: 1}) => ложь
+// 04-is-empty
+// * Task description: Write a method that makes a shallow check is object empty
+//  * Expected Result: ({}) => true, ({ a: undefined }) => true, ({ a: 1 }) => false
+
 function checkObj(obj) {
     if (Object.keys(obj).length === 0) {
           console.log("TRUE")

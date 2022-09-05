@@ -1,5 +1,7 @@
-// 02 
-//  * Ожидаемый результат: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+// 02-make-pairs
+// * Task description: Write a method that returns a deep array like [[key, value]]
+//  * Expected Result: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+
 let obj = {
     name: 'ya',
     address: {
@@ -7,18 +9,20 @@ let obj = {
       city: 'Moscow'
     }
 };
-let arr1 = [];
-function checkInObj(obj) {
+
+function check(obj) {
+    let arr = []
     for (let globalKey in obj) {
         if (typeof obj[globalKey] === 'object') {
             for (let key in obj[globalKey]) {
                 let result = [];
                 result.push(key);
                 result.push(obj.address[key]);
-                arr1.push(result); 
+                arr.push(result); 
             }
         }
     }
+    return arr;
 }
-checkInObj(obj);
-console.log(arr1)
+const result = check(obj);
+console.log(result)

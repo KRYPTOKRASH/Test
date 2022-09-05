@@ -1,11 +1,13 @@
-// 01
-// * Ожидаемый результат: True, если объект простой, иначе false. ({ a: 1 }) => истина, ([1, 2, 3]) => ложь
+// 01-is-plain-object
+//  * Task description: Write a method that verifies an argument is a plain object, not an array or null
+//  * Expected Result: True if object is plain, false otherwise. ({ a: 1 }) => true, ([1, 2, 3]) => false
 
-let obj1 = {
+let obj = {
     name: 'Maksim',
 }
-function check(obj1) {
-    let proverka = (typeof obj1 === 'object') ? 'true' : 'false' 
-    console.log(proverka)
-}
-check(obj1);
+function check(obj) {
+    let result = (typeof obj === 'object') ? 'true' : 'false' 
+    return result;
+};
+const functionResult = check(obj);
+console.log(functionResult)

@@ -5,7 +5,7 @@ let myObj = new Object();
   myObj.a = 1
   myObj.b = 2
 function deleteElement(obj, value) {
-    for (let i in obj) {
+  for (let i in obj) {
       if (obj.hasOwnProperty(value)) {
         Reflect.deleteProperty(obj, [value])
       }

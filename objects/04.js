@@ -4,19 +4,21 @@
 
 function checkObj(obj) {
     if (Object.keys(obj).length === 0) {
-          console.log("TRUE")
+          console.log(true)
     } 
     for (let a in obj) {
         if (obj[a] === undefined) {
-            console.log("TRUE")
-        } else { console.log("FALSE") }
+            console.log(true)
+        } else { 
+            console.log(false) 
+        }
     }
 }
 
-let someObj = {}
-let someObj2 = {a: undefined}
-let someObj3 = {a: 1}
+let someObj = {};
+let someObj2 = {a: undefined};
+let someObj3 = {a: 1};
 
-checkObj(someObj)
-checkObj(someObj2)
-checkObj(someObj3)
+checkObj(someObj);
+checkObj(someObj2);
+checkObj(someObj3);

@@ -6,7 +6,8 @@ let obj = {
     name: 'ya',
     address: {
       street: 1905,
-      city: 'Moscow'
+      city: 'Moscow',
+
     }
 };
 
@@ -14,10 +15,11 @@ function check(obj) {
     let arr = []
     for (let globalKey in obj) {
         if (typeof obj[globalKey] === 'object') {
+            let path = obj[globalKey]
             for (let key in obj[globalKey]) {
                 let result = [];
                 result.push(key);
-                result.push(obj.address[key]);
+                result.push(path[key]);
                 arr.push(result); 
             }
         }
@@ -26,3 +28,13 @@ function check(obj) {
 }
 const result = check(obj);
 console.log(result)
+
+var count = 0;
+function sum(a, b) {
+    sum(a, b)
+    count += 1
+    console.log(count)
+}
+
+sum(1, 1)
+

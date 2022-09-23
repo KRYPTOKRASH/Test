@@ -3,20 +3,21 @@
 // * Ожидаемый результат: True, если объекты равны, false,
 // если объекты разные ({a: 1, b: {c: 1}}, {a: 1, b: {c: 1}}) => true
 
-let obj1 = {
+const obj1 = {
     a: 1,
     b: {
         c: 1,
-    },
-}
-let obj2 = {
-    a: 1,
-    b: {
-        c: 1,
-    },
-}
-function compare(obj1, obj2) {
-    for (let key in obj1, obj2) {
-        if
     }
 }
+const obj2 = {
+    a: 1,
+    b: {
+        c: 1,
+    }
+}
+
+
+
+
+
+console.log(check(obj1, obj2))

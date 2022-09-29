@@ -2,19 +2,16 @@
 // * Task description: Write a method that returns an array without listed values
 // * Expected Result: [1, 2, 3, 1, 2] without 1, 2 => [3]
 
-function without(array) {
-    let res = [];
-    for (i = 0; i <= array.length; i++) {
-        for (j = i; j <= array.length; j++) {
-            if (array[i] === array[j]) {
-                array.splice(j, 1)
-                array.splice(i, 1)
-            }
+function without(array, out) {
+        let result = array
+        for (let i = 0; i < out.length; i++) {
+            result = result.filter(function(value) {
+               return value !== out[i]
+            })
         }
+        return result
     }
-    return array
-}
-
 let test = [1, 2, 3, 1, 2];
-console.log(without(test))
+let out = [1, 2]
+console.log(without(test, out))
 

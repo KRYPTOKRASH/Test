@@ -3,9 +3,7 @@
 // * Expected Result: [['a', 1], ['b', 2]] => { a: 1, b: 2 }
 
 function keyValue(array) {
-    let obj = {f};
-    for (i = 0; i < array.length; i++) {
-
-    }
-
+    let obj = Object.fromEntries(array)
+    return obj
 }
+console.log(keyValue([['a', 1], ['b', 2]]))

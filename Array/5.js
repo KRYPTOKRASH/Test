@@ -18,22 +18,3 @@ function without(array) {
 let test = [1, 2, 3, 1, 2];
 console.log(without(test))
 
-
-
-
-
-
-
-
-
-
-
-// for (i = 0; i < array.length; i++) {
-//     let x;
-//     if (array[i] !== ) {
-//         arr.push(array[i+1])
-//     }
-// }
-
-// let arrSet = new Set(array);
-// return   Array.from(arrSet)

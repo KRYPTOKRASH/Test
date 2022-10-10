@@ -6,10 +6,11 @@ function closer(n) {
 const closer1 = closer(1)
 const closer2 = closer(2)
 const closer3 = closer(3)
-
+console.group('First task:')
 console.log(closer1(100))
 console.log(closer2(100))
 console.log(closer3(100))
+console.groupEnd()
 
 
 
@@ -24,8 +25,10 @@ function bind(context, fn) {
       fn.apply(context, args)
     }
 }
+console.group('Second task:')
 bind(person1, logPerson)()
 bind(person2, logPerson)()
+console.groupEnd()
 
 
 function makeCounter() {
@@ -35,15 +38,16 @@ function makeCounter() {
         return count++
     }
 }
-
+console.group('Counter task:')
 let counter = makeCounter()
 let counter2 = makeCounter()
 
-// console.log(counter()); // 0
-// console.log(counter()); // 1
-// console.log(counter()); // 2
-// console.log(counter2()); // 0
 
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter2()); // 0
+console.groupEnd()
 
 function sum(a) {
     return function (b) {
@@ -51,10 +55,11 @@ function sum(a) {
     }
 }
 
+console.group('Closer task:')
 console.log(sum(4)(7))
+console.groupEnd()
 
-
-
+console.group('Array filter task:')
 let arr = [1, 2, 3, 4, 5, 6, 7]
 
 function between(a, b) {
@@ -70,8 +75,8 @@ function inArray(arr) {
         return arr.includes(x)
     }
 }
-
 console.log(arr.filter(inArray([2, 5, 7, 10, 150])))
+console.groupEnd()
 
 
 let users = [
